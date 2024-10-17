@@ -2,7 +2,7 @@ const Tag=require('../models/tag')
 
 
 //create tag
-exports.createTag=async(req,res)=>{
+exports.createCategory=async(req,res)=>{
     try{
         const {name,description}=req.body;
         if(!name || !description)
@@ -36,7 +36,7 @@ exports.createTag=async(req,res)=>{
 }
 
 //get all tags
-exports.showAllTags=async(req,res)=>{
+exports.showAllCategory=async(req,res)=>{
     try{
         const allTags=await Tag.find({},{name:true,description:true})
 
